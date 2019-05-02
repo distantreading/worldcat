@@ -18,9 +18,9 @@ from os.path import join
 import pandas as pd
 
 
-wdir = ""
-csv_file = join(wdir, "metadata.csv")
-write_file = join(wdir, "html")
+#wdir = ""
+#csv_file = join(wdir, "metadata.csv")
+#write_file = join(wdir, "html")
 
 plain_suchstring = "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&dblist=638&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29%29+%3E+x0%3Abook+%3E+ln%3Afre&qt=facet_ln%3A"
 
@@ -85,7 +85,7 @@ def save_html(data, write_file, html, author, title):
     with open(join(write_file, "{}_html.html".format(filename)), "w", encoding="utf8") as outfile:
         outfile.write(html)
 
-def main(plain_suchstring):
+def main(plain_suchstring, csv_file):
 
     data = read_csv(csv_file)
     for index, data in data.iterrows():
@@ -95,4 +95,4 @@ def main(plain_suchstring):
         html = get_html(suchstring)
         save_html(data, write_file, html, author, title)
     
-main(plain_suchstring)
+main(plain_suchstring, csv_file)

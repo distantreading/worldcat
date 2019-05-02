@@ -40,7 +40,7 @@ def get_id(file):
     Extracts the novel id from the file name.
     """
     basename,ext = os.path.basename(file).split(".")
-    id, author = os.path.basename(basename).split("_")
+    id, author, title = os.path.basename(basename).split("_")
     print(id)
     return id
 

@@ -1,0 +1,30 @@
+# This is the configuration file for the worldcat.py script. 
+# Use this file to define the various parameters for running the script. 
+
+
+
+# Path to the folder containing the XML-TEI files for which WorldCat 
+# statistics will be retrieved. 
+
+xmlpath : "/home/christof/repos/cost/ELTeC-fra/level1/FR01*.xml" 
+
+# Language of the collection. Only those entries in WorldCat will be 
+# considered that correspond to this language.
+
+lang : "fra"
+
+# Working directory
+
+wdir : ""
+
+# CSV file
+
+csv_file : "metadata_short.csv"
+
+# Folder for the HTML files
+
+write_file : "html"
+
+# Suchstring plain
+
+plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&dblist=638&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29%29+%3E+x0%3Abook+%3E+ln%3Afre&qt=facet_ln%3A"
