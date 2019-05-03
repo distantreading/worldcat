@@ -17,8 +17,8 @@ import pandas as pd
 
 # === Parameters ===
 
-dir = ""
-xmlfolder = join("xml", "*.xml")
+#dir = ""
+#xmlfolder = join("xml", "*.xml")
 
 # === Functions ===
 
@@ -35,14 +35,16 @@ def read_xml(file):
         xml = bs(xml, "xml")
         return xml
 
+
 def get_id(file):
     """
     Extracts the novel id from the file name.
     """
     basename,ext = os.path.basename(file).split(".")
-    id, author, title = os.path.basename(basename).split("_")
+    id = re.match("\w{2,3}\d{4,5}", basename).group()
     print(id)
     return id
+
 
 def get_title(xml):
     """
@@ -50,6 +52,7 @@ def get_title(xml):
     """
     title = xml.find("title").get_text()
     return title
+
 
 def get_author(xml):
     """
@@ -59,6 +62,7 @@ def get_author(xml):
     author = re.sub('\((.*?)\)', "", author)
     return author
 
+
 def append_dict(dict, id, title, author):
     """
     Adds metadata to the dictionary.
@@ -66,13 +70,15 @@ def append_dict(dict, id, title, author):
     dict[id] = [title, author]
     return dict
 
+
 def save_csv(dict):
     """
     Turns the dictionary into a dataframe.
     Saves the dataframe to a csv file.
     """
     dataframe = pd.DataFrame.from_dict(dict, orient="index")
-    dataframe.to_csv('metadata_short.csv', index_label="id", header = ["title", "author"])
+    dataframe.to_csv('metadata_short.csv', index_label="id", header = ["title", "author"], sep="\t")
+    
     
 # === Coordinating function ===
 
@@ -80,6 +86,7 @@ def main(xmlfolder):
     """
     Coordinates the creation of the metadata table.
     """
+    print("--getmetadata")
     dict = {}
     
     for file in glob.glob(xmlfolder):
@@ -90,4 +97,4 @@ def main(xmlfolder):
         append_dict(dict, id, title, author)
         save_csv(dict)
 
-main(xmlfolder)
+#main(xmlfolder="test_xml/*.xml")

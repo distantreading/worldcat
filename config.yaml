@@ -6,7 +6,7 @@
 # Path to the folder containing the XML-TEI files for which WorldCat 
 # statistics will be retrieved. 
 
-xmlpath : "/home/christof/repos/cost/ELTeC-fra/level1/FR01*.xml" 
+xmlpath : "/media/christof/mydata/repos/cost/worldcat/test_xml/*.xml" 
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
