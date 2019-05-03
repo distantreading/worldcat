@@ -11,13 +11,18 @@ The scripts are written in Python3 so you need Python 3 on your computer. The sc
 
 In addition, you need to have the following packages installed: pandas, Beautifulsoup, requests, yaml. 
 
+Finally, you need the contents of the "worldcat" repository as well as the contents of the ELTeC collection of your choice somewhere on your computer.
+
 ## Setting the parameters 
 
 All parameters are set in the configuration file called "config.yaml". You find explanations there for each parameter. 
 
 ## Running the scripts 
 
-The easiest way of running the script is to open a Terminal, type "python3 run_worldcat.py" and hit return. 
+The easiest way of running the script is to do so using the Terminal. 
+
+1. Navigate to the folder containing the "run_worldcat.py" script.
+2. Type "python3 run_worldcat.py" and hit return. 
 
 ## Contact 
 
