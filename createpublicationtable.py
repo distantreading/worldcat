@@ -16,8 +16,8 @@ import pandas as pd
 
 # === Parameters ===
 
-dir=""
-htmlpages = join(dir, "html", "*.html")
+#dir=""
+#htmlpages = join(dir, "html", "*.html")
 
 
 # === Functions ===
@@ -129,15 +129,16 @@ def save_csv(dataframe):
     """
     Saves the dataframe as csv file.
     """
-    dataframe.to_csv('publications1.csv')
+    dataframe.to_csv('reprint_counts.csv')
      
                 
 # === Coordinating function ===
 
-def main(dir, htmlpages):
+def main(htmlpages):
     """
     Coordinates the creation of the publication table.
     """
+    print("--createpublicationtable")
     publdict = create_dictionary()
     
     for file in glob.glob(htmlpages):
@@ -151,4 +152,4 @@ def main(dir, htmlpages):
     save_csv(dataframe)
         
         
-main(dir, htmlpages)
+#main(dir, htmlpages)

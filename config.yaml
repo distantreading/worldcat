@@ -6,7 +6,7 @@
 # Path to the folder containing the XML-TEI files for which WorldCat 
 # statistics will be retrieved. 
 
-xmlpath : "/media/christof/mydata/repos/cost/worldcat/test_xml/*.xml" 
+xmlpath : "/home/christof/repos/cost/worldcat/test_xml/*.xml" 
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
@@ -24,6 +24,8 @@ csv_file : "metadata_short.csv"
 # Folder for the HTML files
 
 write_file : "html"
+
+htmlpages : "html/*.html"
 
 # Suchstring plain
 

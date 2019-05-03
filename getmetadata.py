@@ -8,6 +8,7 @@ Input: xml files (novels)
 Output: metadata as csv-file
 """
 
+
 from bs4 import BeautifulSoup as bs
 import os
 from os.path import join
@@ -15,10 +16,7 @@ import glob
 import re
 import pandas as pd
 
-# === Parameters ===
 
-#dir = ""
-#xmlfolder = join("xml", "*.xml")
 
 # === Functions ===
 
@@ -43,7 +41,7 @@ def get_id(file):
     basename,ext = os.path.basename(file).split(".")
     id = re.match("\w{2,3}\d{4,5}", basename).group()
     print(id)
-    return id
+    return id, basename
 
 
 def get_title(xml):
@@ -63,11 +61,11 @@ def get_author(xml):
     return author
 
 
-def append_dict(dict, id, title, author):
+def append_dict(dict, id, basename, title, author):
     """
     Adds metadata to the dictionary.
     """
-    dict[id] = [title, author]
+    dict[id] = [basename, title, author]
     return dict
 
 
@@ -77,7 +75,7 @@ def save_csv(dict):
     Saves the dataframe to a csv file.
     """
     dataframe = pd.DataFrame.from_dict(dict, orient="index")
-    dataframe.to_csv('metadata_short.csv', index_label="id", header = ["title", "author"], sep="\t")
+    dataframe.to_csv('metadata.csv', index_label="id", header = ["basename", "title", "au-name"], sep="\t")
     
     
 # === Coordinating function ===
@@ -91,10 +89,8 @@ def main(xmlfolder):
     
     for file in glob.glob(xmlfolder):
         xml = read_xml(file)
-        id = get_id(file)
+        id, basename = get_id(file)
         title = get_title(xml)
         author = get_author(xml)
-        append_dict(dict, id, title, author)
+        append_dict(dict, id, basename, title, author)
         save_csv(dict)
-
-#main(xmlfolder="test_xml/*.xml")

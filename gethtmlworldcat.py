@@ -14,15 +14,10 @@ Dieser Suchstring wird als plain_suchstring übergeben; Autor und Titel wurden m
 """
 
 import requests
+import os
 from os.path import join
 import pandas as pd
 
-
-#wdir = ""
-#csv_file = join(wdir, "metadata.csv")
-#write_file = join(wdir, "html")
-
-plain_suchstring = "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&dblist=638&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29%29+%3E+x0%3Abook+%3E+ln%3Afre&qt=facet_ln%3A"
 
 
 def read_csv(csv_file):
@@ -30,9 +25,10 @@ def read_csv(csv_file):
     Metadaten-Tabelle wird eingelesen
     """
     with open(csv_file, encoding = "utf8") as infile:
-        data = pd.read_csv(infile, sep = ",")
+        data = pd.read_csv(infile, sep = "\t")
         #print(data.head())
     return data
+   
    
 def get_author(data):
     """
@@ -42,6 +38,7 @@ def get_author(data):
     author = author.split(",")[0]
     #print(author)
     return author
+
 
 def get_title(data):
     """
@@ -60,6 +57,7 @@ def generate_suchstring(plain_suchstring, title, author):
     #print(suchstring)
     return suchstring
 
+
 def get_html(suchstring):
     """
     Mit requests wird die html heruntergeladen
@@ -68,6 +66,7 @@ def get_html(suchstring):
     html = html.text
     #print(html)
     return html
+    
     
 def save_html(data, write_file, html, author, title):
     """
@@ -79,20 +78,22 @@ def save_html(data, write_file, html, author, title):
     """
     Besser zur Weiterverarbeitung: filename oder xml-id aus Metadatentabelle:
     """
-    
-    filename = data["filename"]
-    xmlid = data["xmlid"]
+    if not os.path.exists(write_file): 
+        os.makedirs(write_file)
+    filename = data["basename"]
+    #xmlid = data["xmlid"]
     with open(join(write_file, "{}_html.html".format(filename)), "w", encoding="utf8") as outfile:
         outfile.write(html)
 
-def main(plain_suchstring, csv_file):
 
+def main(plain_suchstring, csv_file, write_file):
+    print("--gethtmlworldcat")
     data = read_csv(csv_file)
     for index, data in data.iterrows():
+        print(data["id"])
         author = get_author(data)
         title = get_title(data)
         suchstring = generate_suchstring(plain_suchstring, title, author)
         html = get_html(suchstring)
         save_html(data, write_file, html, author, title)
     
-main(plain_suchstring, csv_file)
