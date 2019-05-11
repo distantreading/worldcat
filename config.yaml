@@ -6,7 +6,7 @@
 # Path to the folder containing the XML-TEI files for which WorldCat 
 # statistics will be retrieved. 
 
-xmlpath : "/home/christof/repos/cost/worldcat/test_xml/*.xml" 
+#xmlpath : "/home/christof/repos/cost/worldcat/test_xml/*.xml" 
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
@@ -29,4 +29,4 @@ htmlpages : "html/*.html"
 
 # Suchstring plain
 
-plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&dblist=638&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29%29+%3E+x0%3Abook+%3E+ln%3Afre&qt=facet_ln%3A"
+plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&fq=+%28%28x0%3Abook+x4%3Aprintbook%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start={}&qt=page_number_link"
