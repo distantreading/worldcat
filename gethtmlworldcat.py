@@ -1,4 +1,8 @@
 """
+Script for downloading html-files from worldcat
+Input: metadata-table, which was created by getmetadata.py (csv-file)
+Output: html-files for each id in the metadata-table
+
 Script zum Download der html-Seiten von worldcat
 Die Metadaten-Tabelle wird dabei als Input gegeben
 Output sind die entsprechenden html-Seiten zu jedem Werk in der Metadaten-Tabelle
@@ -17,11 +21,12 @@ import requests
 import os
 from os.path import join
 import pandas as pd
-
+import re
 
 
 def read_csv(csv_file):
     """
+    read metadata-table
     Metadaten-Tabelle wird eingelesen
     """
     with open(csv_file, encoding = "utf8") as infile:
@@ -32,6 +37,7 @@ def read_csv(csv_file):
    
 def get_author(data):
     """
+    get author
     Autoren-Name wird aus Metadaten-Tabelle entnommen
     """
     author = data["au-name"]
@@ -42,6 +48,7 @@ def get_author(data):
 
 def get_title(data):
     """
+    get title
     Titel wird der Metadaten-Tabelle entnommen
     """
     title = data["title"]
@@ -51,24 +58,49 @@ def get_title(data):
     
 def generate_suchstring(plain_suchstring, title, author):
     """
-    Die Url wird über .format mit Titel und Autor modifiziert
+    Die Url wird über .format mit Titel und Autor  modifiziert
     """
-    suchstring = plain_suchstring.format(title, author)
+    suchstring = plain_suchstring.format(title, author, 1)
     #print(suchstring)
     return suchstring
 
 
-def get_html(suchstring):
+def get_html(suchstring, data, write_file, filename_number):
     """
+    get html with the requests-library
     Mit requests wird die html heruntergeladen
     """
-    html = requests.get(suchstring)
-    html = html.text
-    #print(html)
+    print(suchstring)
+    try:
+        html = requests.get(suchstring)
+        html = html.text
+        save_html(data, write_file,html, filename_number)
+        #print(html)
+        
+        start = re.sub("start=1", "start={}", suchstring)
+    
+        numbers_of_result = re.search("of about <strong>(.*?)</strong>",html).group(1)
+        #print("Number of results: ", numbers_of_result)
+
+        x = 11
+        while x <= int(numbers_of_result):
+            try:
+                modified_url = start.format(x)
+                print(modified_url)
+                modified_url = requests.get(modified_url)
+                modified_url = modified_url.text
+                filename_number += 1
+                save_html(data, write_file, modified_url, filename_number)
+                x += 10
+            except AttributeError:
+                print("Url not found")
+        
+    except AttributeError:
+        print("Url not found")
     return html
     
     
-def save_html(data, write_file, html, author, title):
+def save_html(data, write_file, html, filename_number):
     """
     Die html-Seiten werden abgespeichert; im Folgenden werden die Dateien mit Autor_Titel_html.html gespeichert
     """
@@ -82,18 +114,19 @@ def save_html(data, write_file, html, author, title):
         os.makedirs(write_file)
     filename = data["basename"]
     #xmlid = data["xmlid"]
-    with open(join(write_file, "{}_html.html".format(filename)), "w", encoding="utf8") as outfile:
+    with open(join(write_file, "{}_html{}.html".format(filename, filename_number)), "w", encoding="utf8") as outfile:
         outfile.write(html)
 
 
 def main(plain_suchstring, csv_file, write_file):
     print("--gethtmlworldcat")
+    filename_number = 1
     data = read_csv(csv_file)
     for index, data in data.iterrows():
         print(data["id"])
         author = get_author(data)
         title = get_title(data)
         suchstring = generate_suchstring(plain_suchstring, title, author)
-        html = get_html(suchstring)
-        save_html(data, write_file, html, author, title)
+        html = get_html(suchstring, data, write_file, filename_number)
+        #save_html(data, write_file, html, author, title)
     
