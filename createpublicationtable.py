@@ -44,8 +44,7 @@ def get_id(file):
     """
     base = os.path.basename(file)                   
     id = str(os.path.splitext(base)[0])
-    #id = id.split("_html")[0]
-    id = id.split("_html(.*?)")[0]
+    id = id.split("_html")[0]
     print(id)
     return id
 
