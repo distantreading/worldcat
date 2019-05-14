@@ -13,11 +13,12 @@ import os
 from os.path import join
 import re
 import pandas as pd
+import logging
 
 # === Parameters ===
 
-#dir=""
-#htmlpages = join(dir, "html", "*.html")
+dir=""
+htmlpages = join(dir, "html", "*.html")
 
 
 # === Functions ===
@@ -43,28 +44,57 @@ def get_id(file):
     """
     base = os.path.basename(file)                   
     id = str(os.path.splitext(base)[0])
-    id = id.split("_html")[0]
+    #id = id.split("_html")[0]
+    id = id.split("_html(.*?)")[0]
     print(id)
     return id
 
 
-def create_publicationlist(html, id):
+def test_search_result(html, id):
     """
+    Prints warning if there are no search results in worldcat and writes warning into log file.
+    The warning contains the id and the search strings of the title and the author.
+    
+    input: html file
+    output: log file
+    """
+    text = "No results match your search"
+    try:
+        errors = html.find('div', {'class' : 'error-results'}).get_text()
+        errors = errors.strip()
+        search_string = re.search("ti:(.*?)au:(.*?)\'", errors).group()
+        title = re.sub(" au:(.*?)\'", "", search_string)                   # extracts search string for the title
+        title = re.sub("ti:", "", title)
+        author = re.search("au:(.*?)\'", search_string).group()            # extracts search string for the author
+        author = re.sub("au:", "", author)
+        author = re.sub("\'", "", author)
+        if errors.startswith(text):
+            print(id + ": No search result in worldcat! Please check the spelling of author and title (see log file)!")
+            logging.warning(id + ": No search result in worldcat! Search strings: title: '" + title + "', author: '" + author + "'")
+    except:
+        pass
+
+
+
+def fill_publicationlist(html, id, publist):
+    """
+    
     Extracts the year of every publication and adds it to a list.
     If there isn't mentioned a year or the extracted number hasn't got a value between 1840 an 2019, the year will be set to 0 in order to contribute to the total number of publications.
     
-    input: html file (search result for a specific novel in worldcat)
+    input: html file (search result for a specific novel in worldcat), id, list (empty or already filled with publication years from first pages of the search result)
     output: list with publication years of one novel
     
     """
-    publist= []  
+ 
     list = html.find_all('span', {'class' : 'itemPublisher'})       # search for <span class="itemPublisher">
     for element in list:
         element = str(element)
         try:
-            element = re.search("[0-9]+", element).group()          # filters the year out of the result string
+            element = re.search("[0-9]+", element).group()          # filters the year from the result string
         except:
-            print(id + " no publication year found")
+            print(id + ": No publication year found!")
+            logging.warning(id + ": No publication year found!")
             element = 0                                             # if the year isn't mentioned, the year 0 is set
         element = int(element)
         if element not in range(1840, 2020):                        # if the publication year isn't a number between 1840 and 2020
@@ -139,13 +169,22 @@ def main(htmlpages):
     Coordinates the creation of the publication table.
     """
     print("--createpublicationtable")
+    logging.basicConfig(filename='createpublicationtable.log',level=logging.WARNING, format='%(asctime)s %(message)s')
     publdict = create_dictionary()
+    publist = []
+    id_prev = ""
     
     for file in glob.glob(htmlpages):
         html = read_html(file)
         id = get_id(file)
-        publist = create_publicationlist(html, id)
+        test_search_result(html, id)
+        if id == id_prev:                                            # html file contains second, third, ... page of the search result
+            publist = fill_publicationlist(html, id, publist)        # existing publist is appended
+        else:                                                        # html contains the first page of the search result
+            publist = []                                             # a new publist is created
+            publist = fill_publicationlist(html, id, publist)
         fill_dictionary(publdict, publist, id)
+        id_prev = id
     
     dataframe = create_dataframe(publdict)
     add_sum(dataframe)
