@@ -19,7 +19,7 @@ wdir : ""
 
 # CSV file
 
-csv_file : "metadata_short.csv"
+csv_file : "metadata.csv"
 
 # Folder for the HTML files
 
