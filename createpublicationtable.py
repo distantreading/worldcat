@@ -17,8 +17,8 @@ import logging
 
 # === Parameters ===
 
-dir=""
-htmlpages = join(dir, "html", "*.html")
+#dir=""
+#htmlpages = join(dir, "html", "*.html")
 
 
 # === Functions ===
