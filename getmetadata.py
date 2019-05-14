@@ -36,10 +36,15 @@ def read_xml(file):
 
 def get_id(file):
     """
-    Extracts the novel id from the file name.
+    Extracts the xml:id from the xml file.
     """
+    with open(file, "r", encoding="utf8") as infile: 
+        text = infile.read()
+        id = re.search("xml:id=\"(.*?)\"", text).group()
+        id = re.search("\"(.*?)\"", id).group()
+        id = re.sub("\"", "", id)
+    
     basename,ext = os.path.basename(file).split(".")
-    id = re.match("\w{2,3}\d{4,5}", basename).group()
     print(id)
     return id, basename
 
@@ -75,7 +80,7 @@ def save_csv(dict):
     Saves the dataframe to a csv file.
     """
     dataframe = pd.DataFrame.from_dict(dict, orient="index")
-    dataframe.to_csv('metadata.csv', index_label="id", header = ["basename", "title", "au-name"], sep="\t")
+    dataframe.to_csv('metadata.csv', index_label="xmlid", header = ["basename", "title", "au-name"], sep="\t")
     
     
 # === Coordinating function ===
