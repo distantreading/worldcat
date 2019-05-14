@@ -113,8 +113,8 @@ def save_html(data, write_file, html, filename_number):
     if not os.path.exists(write_file): 
         os.makedirs(write_file)
     filename = data["basename"]
-    #xmlid = data["xmlid"]
-    with open(join(write_file, "{}_html{}.html".format(filename, filename_number)), "w", encoding="utf8") as outfile:
+    xmlid = data["xmlid"]
+    with open(join(write_file, "{}_html{}.html".format(xmlid, filename_number)), "w", encoding="utf8") as outfile:
         outfile.write(html)
 
 
@@ -123,7 +123,7 @@ def main(plain_suchstring, csv_file, write_file):
     filename_number = 1
     data = read_csv(csv_file)
     for index, data in data.iterrows():
-        print(data["id"])
+        print(data["xmlid"])
         author = get_author(data)
         title = get_title(data)
         suchstring = generate_suchstring(plain_suchstring, title, author)
