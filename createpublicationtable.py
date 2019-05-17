@@ -173,8 +173,12 @@ def main(htmlpages):
     publist = []
     id_prev = ""
     
+    filenames = []
     for file in glob.glob(htmlpages):
-        html = read_html(file)
+        filenames.append(os.path.basename(file))
+    filenames.sort()
+    for file in filenames:       
+        html = read_html(join("html", file))
         id = get_id(file)
         test_search_result(html, id)
         if id == id_prev:                                            # html file contains second, third, ... page of the search result

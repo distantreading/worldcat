@@ -1,5 +1,5 @@
-id	basename	title	au-name
-FRA0040	FRA0040_Flaubert-Bovary	Madame Bovary : ELTeC edition	Flaubert, Gustave 
-FRA0052	FRA0052_Maupassant	Bel-Ami : ELTeC edition	Maupassant, Guy de 
-FRA0010	FRA0010_Ponson_Baronne	La baronne trépassée : ELTeC edition	Ponson du Terrail, Pierre Alexis 
-FRA0302	FRA0302_Aimard_Trappeurs	Les Trappeurs d'Arkansas : ELTeC edition	Aimard, Gustave 
+xmlid	basename	title	au-name
+FR0052	FRA0052_Maupassant	Bel-Ami : ELTeC edition	Maupassant, Guy de 
+FR0010	FRA0010_Ponson	La baronne trépassée : ELTeC edition	Ponson du Terrail, Pierre Alexis 
+FR0040	FRA0040_Flaubert	Madame Bovary : ELTeC edition	Flaubert, Gustave 
+FR0302	FRA0302_Aimard	Les Trappeurs d'Arkansas : ELTeC edition	Aimard, Gustave 
