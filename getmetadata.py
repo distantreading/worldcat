@@ -74,28 +74,29 @@ def append_dict(dict, id, basename, title, author):
     return dict
 
 
-def save_csv(dict):
+def save_csv(dict, settings_dict):
     """
     Turns the dictionary into a dataframe.
     Saves the dataframe to a csv file.
     """
     dataframe = pd.DataFrame.from_dict(dict, orient="index")
-    dataframe.to_csv('metadata.csv', index_label="xmlid", header = ["basename", "title", "au-name"], sep="\t")
+    dataframe.to_csv('{}_metadata.csv'.format(settings_dict["lang"]), index_label="xmlid", header = ["basename", "title", "au-name"], sep="\t")
     
     
 # === Coordinating function ===
 
-def main(xmlfolder):
+def main(settings_dict):
     """
     Coordinates the creation of the metadata table.
     """
     print("--getmetadata")
     dict = {}
     
+    xmlfolder = settings_dict["xml_path"]
     for file in glob.glob(xmlfolder):
         xml = read_xml(file)
         id, basename = get_id(file)
         title = get_title(xml)
         author = get_author(xml)
         append_dict(dict, id, basename, title, author)
-        save_csv(dict)
+        save_csv(dict, settings_dict)
