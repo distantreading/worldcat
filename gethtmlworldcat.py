@@ -42,7 +42,7 @@ def get_author(data):
     """
     author = data["au-name"]
     author = author.split(",")[0]
-    #print(author)
+    print(author)
     return author
 
 
@@ -52,45 +52,46 @@ def get_title(data):
     Titel wird der Metadaten-Tabelle entnommen
     """
     title = data["title"]
-    title = title.split(" :")[0]
-    #print(title)
+    title = title.split(": ELT")[0]
+    print(title)
     return title
     
-def generate_suchstring(plain_suchstring, title, author):
+def generate_suchstring(settings_dict, title, author, plain_suchstring):
     """
     Die Url wird über .format mit Titel und Autor  modifiziert
     """
-    suchstring = plain_suchstring.format(title, author, 1)
+    #lang_worldcat = settings_dict["lang_worldcat"]
+    suchstring = plain_suchstring.format(title, author, settings_dict["lang_worldcat"], settings_dict["lang_worldcat"], 1)
     #print(suchstring)
     return suchstring
 
 
-def get_html(suchstring, data, write_file, filename_number):
+def get_html(suchstring, data, write_file, filename_number, lang):
     """
     get html with the requests-library
     Mit requests wird die html heruntergeladen
     """
-    print(suchstring)
+    #print(suchstring)
     try:
         html = requests.get(suchstring)
         html = html.text
-        save_html(data, write_file,html, filename_number)
+        save_html(data, write_file, html, filename_number, lang)
         #print(html)
         
         start = re.sub("start=1", "start={}", suchstring)
     
         numbers_of_result = re.search("of about <strong>(.*?)</strong>",html).group(1)
-        #print("Number of results: ", numbers_of_result)
+        print("Number of results: ", numbers_of_result)
 
         x = 11
         while x <= int(numbers_of_result):
             try:
                 modified_url = start.format(x)
-                print(modified_url)
+                #print(modified_url)
                 modified_url = requests.get(modified_url)
                 modified_url = modified_url.text
                 filename_number += 1
-                save_html(data, write_file, modified_url, filename_number)
+                save_html(data, write_file, modified_url, filename_number, lang)
                 x += 10
             except AttributeError:
                 print("Url not found")
@@ -100,7 +101,7 @@ def get_html(suchstring, data, write_file, filename_number):
     return html
     
     
-def save_html(data, write_file, html, filename_number):
+def save_html(data, write_file, html, filename_number, lang):
     """
     Die html-Seiten werden abgespeichert; im Folgenden werden die Dateien mit Autor_Titel_html.html gespeichert
     """
@@ -118,15 +119,18 @@ def save_html(data, write_file, html, filename_number):
         outfile.write(html)
 
 
-def main(plain_suchstring, csv_file, write_file):
+def main(settings_dict, plain_suchstring):
     print("--gethtmlworldcat")
     filename_number = 1
+    csv_file = settings_dict["csv_file"]
+    write_file = settings_dict["write_file"]
+    lang = settings_dict["lang"]
     data = read_csv(csv_file)
     for index, data in data.iterrows():
         print(data["xmlid"])
         author = get_author(data)
         title = get_title(data)
-        suchstring = generate_suchstring(plain_suchstring, title, author)
-        html = get_html(suchstring, data, write_file, filename_number)
+        suchstring = generate_suchstring(settings_dict, title, author, plain_suchstring)
+        html = get_html(suchstring, data, write_file, filename_number, lang)
         #save_html(data, write_file, html, author, title)
     
