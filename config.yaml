@@ -6,12 +6,17 @@
 # Path to the folder containing the XML-TEI files for which WorldCat 
 # statistics will be retrieved. 
 
-xmlpath : "test_xml/*.xml" 
+#xmlpath : "test_xml/*.xml" 
+xmlpath: "C:/Users/Johanna/worldcat/COST-ELTeC"
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
 
-lang : "fra"
+lang : "eng" # fra, eng
+
+# choose level of xml-files:
+
+level : "level1" # level0, level2
 
 # Working directory
 
@@ -28,5 +33,5 @@ write_file : "html"
 htmlpages : "html/*.html"
 
 # Suchstring plain
-
-plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&fq=+%28%28x0%3Abook+x4%3Aprintbook%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start={}&qt=page_number_link"
+plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3A{}+%3E+ln%3A{}&dblist=638&start={}&qt=page_number_link"
+#plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+OR+%28x0%3Abook+x4%3Alargeprint%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29%29+%3E+ln%3A{}&dblist=638&start={}&qt=page_number_link"
