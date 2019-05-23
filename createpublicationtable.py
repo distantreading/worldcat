@@ -154,21 +154,23 @@ def add_sum(dataframe):
     dataframe.loc['Total']= dataframe.sum()
 
 
-def save_csv(dataframe):
+def save_csv(dataframe, lang):
     """
     Saves the dataframe as csv file.
     """
-    dataframe.to_csv('reprint_counts.csv')
+    dataframe.to_csv('{}_reprint_counts.csv'.format(lang))
      
                 
 # === Coordinating function ===
 
-def main(htmlpages):
+def main(settings_dict):
     """
     Coordinates the creation of the publication table.
     """
     print("--createpublicationtable")
-    logging.basicConfig(filename='createpublicationtable.log',level=logging.WARNING, format='%(asctime)s %(message)s')
+    htmlpages = settings_dict["html_folder"]
+    lang = settings_dict["lang"]
+    logging.basicConfig(filename='{}_createpublicationtable.log'.format(lang),level=logging.WARNING, format='%(asctime)s %(message)s')
     publdict = create_dictionary()
     publist = []
     id_prev = ""
@@ -178,7 +180,7 @@ def main(htmlpages):
         filenames.append(os.path.basename(file))
     filenames.sort()
     for file in filenames:       
-        html = read_html(join("html", file))
+        html = read_html(join(settings_dict["write_file"], file))
         id = get_id(file)
         test_search_result(html, id)
         if id == id_prev:                                            # html file contains second, third, ... page of the search result
@@ -191,7 +193,7 @@ def main(htmlpages):
     
     dataframe = create_dataframe(publdict)
     add_sum(dataframe)
-    save_csv(dataframe)
+    save_csv(dataframe, lang)
         
         
 #main(dir, htmlpages)
