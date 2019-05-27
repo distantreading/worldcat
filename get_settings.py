@@ -46,6 +46,20 @@ def get_lang_worldcat(lang, d): # matches the chosen language to the language-co
     d["lang_worldcat"] = lang_worldcat # creates new dictionary key 
     return lang, d
 
+def get_lang_hit(lang, d):  # matches the chosen language to the language category in worldcat
+    
+    hit_lang = {"fra":"French", "eng":"English"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language category as values
+    for key, value in hit_lang.items():
+        
+        if lang == key:
+            lang_hit = value
+            break
+        else:
+            print("choose valid lang")
+    
+    d["lang_hit"] = lang_hit
+    return d
+
 def get_write_file(d, write_file): # for creating or using a sub-file for each language, where html-pages will be stored
     
     new_write_file = join(write_file, d["lang"])
@@ -70,6 +84,7 @@ def main(lang, xml_path, level, csv_file, write_file, htmlpages):
     d, xml_folder = get_xml_folder(d, xml_path, level)
     d, csv_file = get_csv_file(d, csv_file)
     lang, d =  get_lang_worldcat(lang, d)
+    d = get_lang_hit(lang, d)
     new_write_file, d = get_write_file(d, write_file)
     html_folder, d = get_html_file(d, htmlpages) 
     print(d)

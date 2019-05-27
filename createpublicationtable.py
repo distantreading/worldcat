@@ -43,10 +43,10 @@ def get_id(file):
     output: filename (in this case the id of the novel)
     """
     base = os.path.basename(file)                   
-    id = str(os.path.splitext(base)[0])
-    id = id.split("_html")[0]
+    id_ext = str(os.path.splitext(base)[0])
+    id = id_ext.split("_html")[0]
     print(id)
-    return id
+    return id, id_ext
 
 
 def test_search_result(html, id):
@@ -64,6 +64,7 @@ def test_search_result(html, id):
         search_string = re.search("ti:(.*?)au:(.*?)\'", errors).group()
         title = re.sub(" au:(.*?)\'", "", search_string)                   # extracts search string for the title
         title = re.sub("ti:", "", title)
+        title = re.sub(": ELTeC edition", "", title)
         author = re.search("au:(.*?)\'", search_string).group()            # extracts search string for the author
         author = re.sub("au:", "", author)
         author = re.sub("\'", "", author)
@@ -72,35 +73,74 @@ def test_search_result(html, id):
             logging.warning(id + ": No search result in worldcat! Search strings: title: '" + title + "', author: '" + author + "'")
     except:
         pass
+    
+
+def create_df_worldcat(html, settings_dict, id_ext):
+    """
+    Takes a html file containing the search result in worldcat and creates a dataframe with hit number (corresponding to the html), hit language and publication year
+    If there isn't mentioned a year, it will be set to 0 in order to contribute to the total number of publications. 
+    
+    input: html file, settings_dict, id
+    output: dataframe
+    """
+    df_worldcat = pd.DataFrame(columns=['number', 'itemLanguage', 'year'])
+    list = html.find_all('tr', {'class' : 'menuElem'})               # list with all hits (still marked up)
+    
+    for item in list:
+        number = item.find('div', {'class' : 'item_number'}).get_text()
+        itemLang = item.find('span', {'class' : 'itemLanguage'}).get_text()
+        try:
+            year = item.find('span', {'class' : 'itemPublisher'}).get_text()
+            year = re.search("[0-9]+", year).group()   
+        except:
+            year = "0"
+            print("No publication year found for item " + number + " in file " + str(id_ext))
+            logging.warning(str(id_ext) + ": No publication year found for item " + number + "!")
+        df_worldcat = df_worldcat.append({'number': number, 'itemLanguage': itemLang, 'year': year}, ignore_index=True)
+        #print(df_worldcat)
+        
+    return(df_worldcat)
+       
+
+def test_lang(df_worldcat, settings_dict):
+    """
+    Tests the language of each hit in html. If the language isn't the expected one, the number is stored in a list called skip.
+    
+    input: html, settings_dict
+    output: list with numbers corresponding to hits with "wrong" language.
+    
+    """
+    item_lang = settings_dict["lang_hit"]
+    skip = []
+    for index, row in df_worldcat.iterrows():
+        if row['itemLanguage'] == item_lang:
+            pass
+        else:
+            skip.append(row['number'])         # hit number is appended to skip list if language isn't the expected one
+    #print(skip)
+    return skip
 
 
-
-def fill_publicationlist(html, id, publist):
+def fill_publicationlist(df_worldcat, publist, skip):
     """
     
-    Extracts the year of every publication and adds it to a list.
-    If there isn't mentioned a year or the extracted number hasn't got a value between 1840 an 2019, the year will be set to 0 in order to contribute to the total number of publications.
+    Adds the publication years of hits with the "right" language to a list.
+    If the extracted number hasn't got a value between 1840 an 2019, the year will be set to 0 in order to contribute to the total number of publications.
     
-    input: html file (search result for a specific novel in worldcat), id, list (empty or already filled with publication years from first pages of the search result)
+    input: dataframe df_worldcat, publist (empty or already filled with publication years from first pages of the search result), skip (list with numbers corresponding to items with "wrong" language)
     output: list with publication years of one novel
     
     """
  
-    list = html.find_all('span', {'class' : 'itemPublisher'})       # search for <span class="itemPublisher">
-    for element in list:
-        element = str(element)
-        try:
-            element = re.search("[0-9]+", element).group()          # filters the year from the result string
-        except:
-            print(id + ": No publication year found!")
-            logging.warning(id + ": No publication year found!")
-            element = 0                                             # if the year isn't mentioned, the year 0 is set
-        element = int(element)
-        if element not in range(1840, 2020):                        # if the publication year isn't a number between 1840 and 2020
-            element = 0
-        publist.append(element)                                     # adding the year to the list
+    for index, row in df_worldcat.iterrows():
+        if row['number'] not in skip:
+            year = row['year']
+            year = int(year)
+            if year not in range(1840, 2020):                        # if the publication year isn't a number between 1840 and 2020
+                year = 0
+            publist.append(year)
     return publist
-    
+            
 
 def create_dictionary():
     """
@@ -111,7 +151,6 @@ def create_dictionary():
         keys.append(x)
     
     pubdict = {key: {} for key in keys}               # creates a dictionary with the keys from the list and sets empty dictionaries as values
-    #print(pubdict)
     return pubdict
 
 
@@ -181,13 +220,15 @@ def main(settings_dict):
     filenames.sort()
     for file in filenames:       
         html = read_html(join(settings_dict["write_file"], file))
-        id = get_id(file)
+        id, id_ext = get_id(file)
+        df_worldcat = create_df_worldcat(html, settings_dict, id_ext)
         test_search_result(html, id)
+        skip = test_lang(df_worldcat, settings_dict)
         if id == id_prev:                                            # html file contains second, third, ... page of the search result
-            publist = fill_publicationlist(html, id, publist)        # existing publist is appended
+            publist = fill_publicationlist(df_worldcat, publist, skip)        # existing publist is appended
         else:                                                        # html contains the first page of the search result
             publist = []                                             # a new publist is created
-            publist = fill_publicationlist(html, id, publist)
+            publist = fill_publicationlist(df_worldcat, publist, skip)
         fill_dictionary(publdict, publist, id)
         id_prev = id
     
