@@ -33,7 +33,7 @@ def get_csv_file(d, csv_file): # input: dictionary, csv_file; returns csv_file w
 
 def get_lang_worldcat(lang, d): # matches the chosen language to the language-code in worldcat
     
-    worldcat_lang = {"fra": "fre", "eng":"eng"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language codes as values 
+    worldcat_lang = {"fra": "fre", "eng":"eng", "ita":"ita"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language codes as values 
     #print("lang", lang)
     for key, value in worldcat_lang.items():
         
@@ -48,7 +48,7 @@ def get_lang_worldcat(lang, d): # matches the chosen language to the language-co
 
 def get_lang_hit(lang, d):  # matches the chosen language to the language category in worldcat
     
-    hit_lang = {"fra":"French", "eng":"English"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language category as values
+    hit_lang = {"fra":"French", "eng":"English", "ita":"Italian"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language category as values
     for key, value in hit_lang.items():
         
         if lang == key:
