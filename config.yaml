@@ -3,20 +3,21 @@
 
 
 
-# Path to the folder containing the XML-TEI files for which WorldCat 
-# statistics will be retrieved. 
+# Path to the folder in which the top-level folder of 
+# the intended ELTeC repository is found. (Not directly the folder
+# that contains XML-TEI files.)
 
-#xmlpath : "test_xml/*.xml" 
-xmlpath: "C:/Users/Johanna/worldcat/COST-ELTeC"
+#xmlpath: "C:/Users/Johanna/worldcat/COST-ELTeC" # Example on Windows
+xmlpath : "/media/christof/mydata/repos/cost/" # Example on Linux
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
 
-lang : "eng" # fra, eng
+lang : "fra" # fra, eng
 
 # choose level of xml-files:
 
-level : "level1" # level0, level2
+level : "level0" # level0, level2
 
 # Working directory
 
