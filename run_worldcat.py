@@ -7,6 +7,7 @@ import getmetadata
 import gethtmlworldcat
 import createpublicationtable
 import get_settings
+import create_summary
 
 configfile = "config.yaml"
 
@@ -18,6 +19,7 @@ def main(configfile):
     getmetadata.main(settings_dict)
     gethtmlworldcat.main(settings_dict, config["plain_suchstring"])
     createpublicationtable.main(settings_dict)
+    create_summary.main(settings_dict)
     
 
 main(configfile)

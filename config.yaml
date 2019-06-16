@@ -13,7 +13,7 @@ xmlpath : "/media/christof/mydata/repos/cost/" # Example on Linux
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
 
-lang : "ita" # fra, eng
+lang : "fra" # fra, eng
 
 # choose level of xml-files:
 
