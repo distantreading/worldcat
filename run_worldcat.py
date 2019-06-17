@@ -15,11 +15,11 @@ configfile = "config.yaml"
 def main(configfile): 
     with open(configfile, 'r') as configfile:
         config = yaml.safe_load(configfile)
-    settings_dict = get_settings.main(config["lang"], config["xmlpath"], config["level"], config["csv_file"], config["write_file"], config["htmlpages"])
-    get_metadata.main(settings_dict)
-    get_htmlworldcat.main(settings_dict, config["plain_suchstring"])
-    create_publicationtable.main(settings_dict)
-    create_summary.main(settings_dict)
+        settings_dict = get_settings.main(config["lang"], config["xmlpath"], config["level"], config["write_file"], config["htmlpages"])
+        get_metadata.main(settings_dict)
+        get_htmlworldcat.main(settings_dict, config["plain_suchstring"])
+        create_publicationtable.main(settings_dict)
+        create_summary.main(settings_dict)
     
 
 main(configfile)

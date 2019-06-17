@@ -22,16 +22,12 @@ def get_xml_folder(d, xml_path, level): # input: dictionary, xml_path, level (bo
     
     return d, xml_folder
 
-def get_csv_file(d, csv_file): # input: dictionary, csv_file; returns csv_file with language extention
+def get_csv_file(d): # input: dictionary; returns csv_file with language extention
     
-    #csv_file, ext = csv_file.split(".")
-    #print(csv_file, ext)
-    csv_file = d["lang"] + "_" + csv_file
-    #print("csv file ", csv_file)
-    
+    csv_file = d["lang"] + "_" + "metadata.csv"
     d["csv_file"] = csv_file
     
-    return d, csv_file
+    return d
 
 def get_lang_worldcat(lang, d): # matches the chosen language to the language-code in worldcat
     
@@ -80,12 +76,12 @@ def get_html_file(d, htmlpages): # will be used to get the right html pages, bas
 
     return html_folder, d
     
-def main(lang, xml_path, level, csv_file, write_file, htmlpages):
+def main(lang, xml_path, level, write_file, htmlpages):
     print("--getsettings")
     d = {}
     lang, d = get_lang(lang, d)
     d, xml_folder = get_xml_folder(d, xml_path, level)
-    d, csv_file = get_csv_file(d, csv_file)
+    d = get_csv_file(d)
     lang, d =  get_lang_worldcat(lang, d)
     d = get_lang_hit(lang, d)
     new_write_file, d = get_write_file(d, write_file)
