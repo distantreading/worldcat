@@ -7,9 +7,9 @@
 # the intended ELTeC repository is found. (Not directly the folder
 # that contains XML-TEI files.)
 
-xmlpath: "C:/Users/Anne/Documents/Arbeit/DistantReading/worldcat-master/COST-ELTeC"
-#xmlpath: "C:/Users/Johanna/worldcat/COST-ELTeC" # Example on Windows
-#xmlpath : "/media/christof/mydata/repos/cost/" # Example on Linux
+
+basedir: "C:/Users/Johanna/worldcat/COST-ELTeC" # Example on Windows
+#basedir : "/media/christof/mydata/repos/cost/" # Example on Linux
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.

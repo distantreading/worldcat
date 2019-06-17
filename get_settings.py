@@ -12,12 +12,12 @@ def get_lang(lang, d): # input: empty dictionary, the chosen language; new key "
     return lang, d
     
     
-def get_xml_folder(d, xml_path, level): # input: dictionary, xml_path, level (both parameters from config.yaml); gets to the chosen language and the chosen level
+def get_xml_folder(d, basedir, level): # input: dictionary, xml_path, level (both parameters from config.yaml); gets to the chosen language and the chosen level
     
     #print(level)
-    if not os.path.isdir(xml_path):   # checking the xmlpath
-        print("Wrong path. No XML-TEI files can be found. Please adjust the xmlpath variable in the config file!")
-    xml_folder = xml_path + "/ELTeC-{}/{}/*.xml".format(d["lang"], level)
+    if not os.path.isdir(basedir):   # checking the xmlpath
+        print("Wrong path. No XML-TEI files can be found. Please adjust the basedir variable in the config file!")
+    xml_folder = basedir + "/ELTeC-{}/{}/*.xml".format(d["lang"], level)
     d["xml_path"] = xml_folder
     
     return d, xml_folder
@@ -76,11 +76,11 @@ def get_html_file(d, htmlpages): # will be used to get the right html pages, bas
 
     return html_folder, d
     
-def main(lang, xml_path, level, write_file, htmlpages):
+def main(lang, basedir, level, write_file, htmlpages):
     print("--getsettings")
     d = {}
     lang, d = get_lang(lang, d)
-    d, xml_folder = get_xml_folder(d, xml_path, level)
+    d, xml_folder = get_xml_folder(d, basedir, level)
     d = get_csv_file(d)
     lang, d =  get_lang_worldcat(lang, d)
     d = get_lang_hit(lang, d)

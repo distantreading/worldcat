@@ -15,7 +15,7 @@ configfile = "config.yaml"
 def main(configfile): 
     with open(configfile, 'r') as configfile:
         config = yaml.safe_load(configfile)
-        settings_dict = get_settings.main(config["lang"], config["xmlpath"], config["level"], config["write_file"], config["htmlpages"])
+        settings_dict = get_settings.main(config["lang"], config["basedir"], config["level"], config["write_file"], config["htmlpages"])
         get_metadata.main(settings_dict)
         get_htmlworldcat.main(settings_dict, config["plain_suchstring"])
         create_publicationtable.main(settings_dict)
