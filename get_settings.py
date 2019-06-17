@@ -2,7 +2,7 @@
 # It includes: the language, based on that the xml-folder, the csv-file, the language-parameter for the worldcat-url, the write-file, which stores the
 # html-pages, and the htmlpages parameter
 # the data is stored in a dictionary, that will be used in the run_worldcat.py (and the dependent scripts)
-
+import os
 from os.path import join
 
 def get_lang(lang, d): # input: empty dictionary, the chosen language; new key "lang", value is the chosen language  
@@ -15,6 +15,8 @@ def get_lang(lang, d): # input: empty dictionary, the chosen language; new key "
 def get_xml_folder(d, xml_path, level): # input: dictionary, xml_path, level (both parameters from config.yaml); gets to the chosen language and the chosen level
     
     #print(level)
+    if not os.path.isdir(xml_path):   # checking the xmlpath
+        print("Wrong path. No XML-TEI files can be found. Please adjust the xmlpath variable in the config file!")
     xml_folder = xml_path + "/ELTeC-{}/{}/*.xml".format(d["lang"], level)
     d["xml_path"] = xml_folder
     
@@ -79,6 +81,7 @@ def get_html_file(d, htmlpages): # will be used to get the right html pages, bas
     return html_folder, d
     
 def main(lang, xml_path, level, csv_file, write_file, htmlpages):
+    print("--getsettings")
     d = {}
     lang, d = get_lang(lang, d)
     d, xml_folder = get_xml_folder(d, xml_path, level)
@@ -87,5 +90,5 @@ def main(lang, xml_path, level, csv_file, write_file, htmlpages):
     d = get_lang_hit(lang, d)
     new_write_file, d = get_write_file(d, write_file)
     html_folder, d = get_html_file(d, htmlpages) 
-    print(d)
+    #print(d)
     return d
