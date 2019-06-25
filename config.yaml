@@ -14,7 +14,7 @@ basedir: "C:/Users/Johanna/worldcat/COST-ELTeC" # Example on Windows
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
 
-lang : "fra" # fra, eng
+lang : "fra" # fra, eng, deu, ita, por, spa, srp, gre, hun, slv, rom, nor, cze
 
 # choose level of xml-files:
 
@@ -29,7 +29,3 @@ wdir : ""
 write_file : "html"
 
 htmlpages : "html/*.html"
-
-# Suchstring plain
-plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3A{}+%3E+ln%3A{}&dblist=638&start={}&qt=page_number_link"
-#plain_suchstring : "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+OR+%28x0%3Abook+x4%3Alargeprint%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29%29+%3E+ln%3A{}&dblist=638&start={}&qt=page_number_link"
