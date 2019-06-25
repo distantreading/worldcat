@@ -27,7 +27,7 @@ The scripts create several new files which are written to the "worldcat" folder 
 
 * xxx_summary.csv: contains for each novel total number of reprints, number of reprints in target period and canonicity status
 
-* xxx_createpublicationtable.log: log file that documents problems while reading out the reprints from worldcat
+* xxx_publicationtable.log: log file that documents problems while reading out the reprints from worldcat
 
 In addition a "html" folder is generated. It stores the downloaded pages of the search result in Worldcat. 
 

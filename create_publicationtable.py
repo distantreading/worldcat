@@ -209,7 +209,7 @@ def main(settings_dict):
     print("--createpublicationtable")
     htmlpages = settings_dict["html_folder"]
     lang = settings_dict["lang"]
-    logging.basicConfig(filename='{}_createpublicationtable.log'.format(lang),level=logging.WARNING, format='%(asctime)s %(message)s')
+    logging.basicConfig(filename='{}_publicationtable.log'.format(lang),level=logging.WARNING, format='%(asctime)s %(message)s')
     publdict = create_dictionary()
     publist = []
     id_prev = ""
