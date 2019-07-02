@@ -56,11 +56,11 @@ def get_title(data):
     print(title)
     return title
     
-def generate_suchstring(settings_dict, title, author, plain_suchstring):
+def generate_suchstring(settings_dict, title, author):
     """
     Die Url wird über .format mit Titel und Autor  modifiziert
     """
-    #lang_worldcat = settings_dict["lang_worldcat"]
+    plain_suchstring = "https://www.worldcat.org/search?q=ti%3A{}+au%3A{}&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3A{}+%3E+ln%3A{}&dblist=638&start={}&qt=page_number_link"
     suchstring = plain_suchstring.format(title, author, settings_dict["lang_worldcat"], settings_dict["lang_worldcat"], 1)
     #print(suchstring)
     return suchstring
@@ -119,7 +119,7 @@ def save_html(data, write_file, html, filename_number, lang):
         outfile.write(html)
 
 
-def main(settings_dict, plain_suchstring):
+def main(settings_dict):
     print("--gethtmlworldcat")
     filename_number = 1
     csv_file = settings_dict["csv_file"]
@@ -130,7 +130,7 @@ def main(settings_dict, plain_suchstring):
         print(data["xmlid"])
         author = get_author(data)
         title = get_title(data)
-        suchstring = generate_suchstring(settings_dict, title, author, plain_suchstring)
+        suchstring = generate_suchstring(settings_dict, title, author)
         html = get_html(suchstring, data, write_file, filename_number, lang)
         #save_html(data, write_file, html, author, title)
     
