@@ -7,25 +7,26 @@
 # the intended ELTeC repository is found. (Not directly the folder
 # that contains XML-TEI files.)
 
-
-basedir: "C:/Users/Johanna/worldcat/COST-ELTeC" # Example on Windows
+basedir: "C:/Users/Johanna/Desktop/ELTeC_worldcat/ELTeC" # Example on Windows
 #basedir : "/media/christof/mydata/repos/cost/" # Example on Linux
+
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
 
-lang : "fra" # fra, eng, deu, ita, por, spa, srp, gre, hun, slv, rom, nor, cze
+lang : "por" # fra, eng, deu, ita, por, spa, srp, gre, hun, slv, rom, nor, cze, lit
 
-# choose level of xml-files:
+# Choose level of xml-files:
 
 level : "level1" # level0, level2
 
 # Working directory
+# Path where Scripts are stored and where are subfolder for the neccessary html-pages will be stored
 
 wdir : ""
 
-# Folder for the HTML files
+# Results
+# Path to the folder where results (csv-files) are stored
+# if no changes are made, it will be the working directory path
 
-write_file : "html"
-
-htmlpages : "html/*.html"
+results : "" 
