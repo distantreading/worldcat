@@ -29,33 +29,18 @@ def get_csv_file(d): # input: dictionary; returns csv_file with language extenti
     
     return d
 
-def get_lang_worldcat(lang, d): # matches the chosen language to the language-code in worldcat
+def match_langs(lang, d, chosen_dict, chosen_key):
     
-    worldcat_lang = {"fra": "fre", "eng":"eng", "ita":"ita", "deu":"ger", "por":"por", "spa":"spa", "srp":"srp", "gre":"gre", "hun":"hun", "slv":"slv", "rom":"rum", "nor":"nor", "cze":"cze"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language codes as values 
-    #print("lang", lang)
-    for key, value in worldcat_lang.items():
+    if lang in [*chosen_dict]:    
+        for key, value in chosen_dict.items():
         
-        if lang == key:
-            lang_worldcat = value
-            break
-        else:
-            print("choose valid lang")
-    
-    d["lang_worldcat"] = lang_worldcat # creates new dictionary key 
-    return lang, d
-
-def get_lang_hit(lang, d):  # matches the chosen language to the language category in worldcat
-    
-    hit_lang = {"fra":"French", "eng":"English", "ita":"Italian" , "deu":"German", "por":"Poruguese", "spa":"Spanish", "srp":"Serbian", "gre":"Greek, Modern[1453-]", "hun":"Hungarian", "slv":"Slovenian", "rom":"Romanian", "nor":"Norwegian", "cze":"Czech"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language category as values
-    for key, value in hit_lang.items():
+            if lang == key:
+                val = value
+                break
+        d[chosen_key] = val
+    else:
+        print("choose valid lang")
         
-        if lang == key:
-            lang_hit = value
-            break
-        else:
-            print("choose valid lang")
-    
-    d["lang_hit"] = lang_hit
     return d
 
 def get_write_file(d, write_file): # for creating or using a sub-file for each language, where html-pages will be stored
@@ -64,27 +49,50 @@ def get_write_file(d, write_file): # for creating or using a sub-file for each l
     #print("new write file", new_write_file)
     
     d["write_file"] = new_write_file
+    #print(new_write_file)
     return new_write_file, d
 
 def get_html_file(d, htmlpages): # will be used to get the right html pages, based on the htmlpages-parameter of the config.yaml
     
     html_folder, ext = htmlpages.split("/")
     html_folder = join(html_folder, d["lang"], ext)
-    #print("html_folder",html_folder)
+    #print("html_folder", html_folder)
     #print("ext", ext)
     d["html_folder"] = html_folder
 
     return html_folder, d
+
+def get_wdir_file(d, wdir):
     
-def main(lang, basedir, level, write_file, htmlpages):
+    d["wdir"] = wdir
+    
+    return d
+
+def get_results_file(d, results):
+    
+    d["results"] = results
+    
+    return d
+
+def main(lang, basedir, level, wdir, results):
     print("--getsettings")
-    d = {}
+    d_keys = ["lang", "xml_path", "csv_file", "lang_worldcat", "lang_hit", "write_file", "html_folder"]
+    d = {key: None for key in d_keys}
+    
+    worldcat_lang = {"fra": "fre", "eng":"eng", "ita":"ita", "deu":"ger", "por":"por", "spa":"spa", "srp":"srp", "gre":"gre", "ukr":"ukr","slv":"slv", "rom":"rum", "nor":"nor", "cze":"cze", "lit":"lit", "pol":"pol"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language codes as values 
+    hit_lang = {"fra":"French", "eng":"English", "ita":"Italian" , "deu":"German", "por":"Portuguese", "spa":"Spanish", "srp":"Serbian", "gre":"Greek, Modern[1453-]", "ukr":"Ukranian", "slv":"Slovenian", "nor":"Norwegian", "cze":"Czech", "lit":"Lithuanian", "pol":"Polish"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language category as values
+    
+    write_file = join(wdir, "html")
+    htmlpages = join(wdir, "html/*.html")
+    
     lang, d = get_lang(lang, d)
     d, xml_folder = get_xml_folder(d, basedir, level)
     d = get_csv_file(d)
-    lang, d =  get_lang_worldcat(lang, d)
-    d = get_lang_hit(lang, d)
+    d = match_langs(lang, d, worldcat_lang, "lang_worldcat")
+    d = match_langs(lang, d, hit_lang, "lang_hit")
+    d = get_wdir_file(d, wdir)
     new_write_file, d = get_write_file(d, write_file)
-    html_folder, d = get_html_file(d, htmlpages) 
+    html_folder, d = get_html_file(d, htmlpages)
+    d = get_results_file(d, results)
     #print(d)
     return d
