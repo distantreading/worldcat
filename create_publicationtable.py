@@ -15,6 +15,7 @@ import re
 import pandas as pd
 import logging
 
+
 # === Parameters ===
 
 #dir=""
@@ -58,7 +59,8 @@ def test_search_result(html, id):
     output: log file
     """
     text = "No results match your search"
-    try:
+
+    try:    
         errors = html.find('div', {'class' : 'error-results'}).get_text()
         errors = errors.strip()
         search_string = re.search("ti:(.*?)au:(.*?)\'", errors).group()
@@ -70,10 +72,10 @@ def test_search_result(html, id):
         author = re.sub("\'", "", author)
         if errors.startswith(text):
             print(id + ": No search result in worldcat! Please check the spelling of author and title (see log file)!")
-            logging.warning(id + ": No search result in worldcat! Search strings: title: '" + title + "', author: '" + author + "'")
+            logging.warning( str(id) + ": No search result in worldcat! Search strings: title: '" + title + "', author: '" + author + "'")
     except:
         pass
-    
+
 
 def create_df_worldcat(html, settings_dict, id_ext):
     """
@@ -91,7 +93,7 @@ def create_df_worldcat(html, settings_dict, id_ext):
         itemLang = item.find('span', {'class' : 'itemLanguage'}).get_text()
         try:
             year = item.find('span', {'class' : 'itemPublisher'}).get_text()
-            year = re.search("[0-9]+", year).group()   
+            year = re.search("[0-9]+", year).group()
         except:
             year = "0"
             print("No publication year found for item " + number + " in file " + str(id_ext))
@@ -193,11 +195,11 @@ def add_sum(dataframe):
     dataframe.loc['Total']= dataframe.sum()
 
 
-def save_csv(dataframe, lang):
+def save_csv(dataframe, lang, results):
     """
     Saves the dataframe as csv file.
     """
-    dataframe.to_csv('{}_reprint_counts.csv'.format(lang))
+    dataframe.to_csv(join(results, "csv-files", '{}_reprint_counts.csv'.format(lang)), encoding="utf-8", sep="\t")
      
                 
 # === Coordinating function ===
@@ -209,7 +211,18 @@ def main(settings_dict):
     print("--createpublicationtable")
     htmlpages = settings_dict["html_folder"]
     lang = settings_dict["lang"]
-    logging.basicConfig(filename='{}_publicationtable.log'.format(lang),level=logging.WARNING, format='%(asctime)s %(message)s')
+    wdir = settings_dict["wdir"]
+    results = settings_dict["results"]
+    
+    if not os.path.exists(join(wdir, "logfiles")):
+        os.makedirs(join(wdir, "logfiles"))
+    
+    #configure_logging(install_root_handler=False)
+    logging.basicConfig(
+        handlers=[logging.FileHandler(join(wdir, "logfiles", '{}_publicationtable.log'.format(lang)), "w", "utf-8")],
+        format='%(asctime)s %(message)s',
+        level=logging.WARNING)
+    
     publdict = create_dictionary()
     publist = []
     id_prev = ""
@@ -234,7 +247,7 @@ def main(settings_dict):
     
     dataframe = create_dataframe(publdict)
     add_sum(dataframe)
-    save_csv(dataframe, lang)
+    save_csv(dataframe, lang, results)
         
         
-#main(dir, htmlpages)
+#main(settings_dict)
