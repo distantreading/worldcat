@@ -12,6 +12,7 @@ this function creates a summary for canonicity status.
 
 import pandas as pd
 import numpy as np
+from os.path import join
 
 
 # Functions 
@@ -22,7 +23,7 @@ def read_countsfile(countsfile):
     Output: DataFrame
     """
     with open(countsfile, "r", encoding="utf8") as infile: 
-        counts = pd.read_table(infile, sep=",")
+        counts = pd.read_table(infile, sep="\t")
         #print(counts.head())
         return counts
 
@@ -60,7 +61,7 @@ def create_summary(counts, metadata):
     Columns: all reprints, reprints 1970-2009, author, title.
     Output: DataFrame. 
     """
-    total_counts = np.sum(counts.iloc[:,1:], axis=0)
+    total_counts = np.sum(counts.iloc[:-1,1:], axis=0)
     canon_counts = np.sum(counts.iloc[131:171,1:], axis=0)    
     columns = ["total_counts", "canon_counts"]
     summary = pd.DataFrame([total_counts, canon_counts], index=columns).T
@@ -71,23 +72,24 @@ def create_summary(counts, metadata):
     return summary
     
 
-def save_summary(summary, lang): 
+def save_summary(summary, lang, results): 
     """
     Saves the summary DataFrame to CSV.
     """
     summaryfile = str(lang) + "_summary.csv"
-    with open(summaryfile, "w", encoding="utf8") as outfile: 
+    with open(join(results, "csv-files", summaryfile), "w", encoding="utf8") as outfile: 
         summary.to_csv(outfile, sep="\t")
 
 
 # Coordinating function.
 
-def main(settingsdict): 
-    countsfile = str(settingsdict["lang"]) + "_reprint_counts.csv"
-    metadatafile = str(settingsdict["lang"]) + "_metadata.csv"
+def main(settingsdict):
+    results = settingsdict["results"]
+    countsfile = join(results, "csv-files", str(settingsdict["lang"]) + "_reprint_counts.csv")
+    metadatafile = join(results, "csv-files", str(settingsdict["lang"]) + "_metadata.csv")
     counts = read_countsfile(countsfile)
     metadata = read_metadatafile(metadatafile)
     summary = create_summary(counts, metadata)
-    save_summary(summary, settingsdict["lang"])
+    save_summary(summary, settingsdict["lang"], results)
     
 #main(settingsdict)
