@@ -79,8 +79,8 @@ def main(lang, basedir, level, wdir, results):
     d_keys = ["lang", "xml_path", "csv_file", "lang_worldcat", "lang_hit", "write_file", "html_folder"]
     d = {key: None for key in d_keys}
     
-    worldcat_lang = {"fra": "fre", "eng":"eng", "ita":"ita", "deu":"ger", "por":"por", "spa":"spa", "srp":"srp", "gre":"gre", "ukr":"ukr","slv":"slv", "rom":"rum", "nor":"nor", "cze":"cze", "lit":"lit", "pol":"pol"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language codes as values 
-    hit_lang = {"fra":"French", "eng":"English", "ita":"Italian" , "deu":"German", "por":"Portuguese", "spa":"Spanish", "srp":"Serbian", "gre":"Greek, Modern[1453-]", "ukr":"Ukranian", "slv":"Slovenian", "nor":"Norwegian", "cze":"Czech", "lit":"Lithuanian", "pol":"Polish"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language category as values
+    worldcat_lang = {"fra": "fre", "eng":"eng", "ita":"ita", "deu":"ger", "por":"por", "spa":"spa", "srp":"srp", "gre":"gre", "ukr":"ukr","slv":"slv", "rom":"rum", "nor":"nor", "cze":"cze", "lit":"lit", "pol":"pol", "frch":"fre", "gsw": "ger"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language codes as values 
+    hit_lang = {"fra":"French", "eng":"English", "ita":"Italian" , "deu":"German", "por":"Portuguese", "spa":"Spanish", "srp":"Serbian", "gre":"Greek, Modern[1453-]", "ukr":"Ukranian", "slv":"Slovenian", "rom":"Romanian", "nor":"Norwegian", "cze":"Czech", "lit":"Lithuanian", "pol":"Polish", "frch": "French", "gsw":"German"} # dictionary contains ELTeC-language abbreviations as keys, worldcat-language category as values
     
     write_file = join(wdir, "html")
     htmlpages = join(wdir, "html/*.html")
@@ -94,5 +94,5 @@ def main(lang, basedir, level, wdir, results):
     new_write_file, d = get_write_file(d, write_file)
     html_folder, d = get_html_file(d, htmlpages)
     d = get_results_file(d, results)
-    #print(d)
+    print(d)
     return d
