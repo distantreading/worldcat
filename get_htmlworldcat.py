@@ -100,7 +100,6 @@ def get_html(suchstring, data, write_file, filename_number, lang, author, title,
                 modified_url = modified_url.text
                 filename_number += 1
                 #print(filename_number)
-                #logging.warning(data["xmlid"] + "worked well " + str(filename_number))
                 
                 save_html(data, write_file, modified_url, filename_number, lang)
                 x += 10
@@ -112,23 +111,11 @@ def get_html(suchstring, data, write_file, filename_number, lang, author, title,
             except requests.exceptions.Timeout:
                 second_try.append(modified_url)
                 logging.warning(data["xmlid"] + "\t"+ author+ "\t" + title + "\t"+ modified_url+ ": TimeOutError " + str(filename_number))
-                #filename_number +=1
                 print("TimeOutError occured:\nSomething didn't work here, a second try will be executed")
             except requests.exceptions.ConnectionError:
                 second_try.append(modified_url)
-                #filename_number += 1
-                print("ConnectionError occured")
-        #print(second_try)
-        #print("Second try \n")        
-        """
-        for stry in second_try:
-            #filename_number += 1
-            print(filename_number)
-            #stry = requests.get(stry, timeout = 7)
-            #stry = stry.text
-            #save_html(data, write_file, stry, filename_number, lang)
-            time.sleep(3)
-        """
+                print("ConnectionError occured")        
+
     except AttributeError:
         print("Url not found" + "\n")
 
