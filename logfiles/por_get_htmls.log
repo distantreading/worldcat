@@ -1,0 +1,43 @@
+2020-07-10 06:50:39,492 POR0009	Eça de Queirós	O Crime do Padre Amaro	https://www.worldcat.org/search?q=ti%3AO Crime do Padre Amaro+au%3AEça de Queirós&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Apor+%3E+ln%3Apor&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 06:52:08,794 POR0008	Eça de Queirós	O Primo Basílio 	https://www.worldcat.org/search?q=ti%3AO Primo Basílio +au%3AEça de Queirós&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Apor+%3E+ln%3Apor&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 06:54:15,229 POR0004_html1: No publication year found for item 9!
+2020-07-10 06:54:15,820 POR0006: No search result in worldcat! Search strings: title: 'O Cura de São Lourenço', author: 'Vasconcelos'
+2020-07-10 06:54:16,182 POR0009_html2: No publication year found for item 9!
+2020-07-10 06:54:16,278 POR0009_html3: No publication year found for item 6!
+2020-07-10 06:54:16,434 POR0010_html1: No publication year found for item 5!
+2020-07-10 06:54:16,439 POR0010_html1: No publication year found for item 7!
+2020-07-10 06:54:16,686 POR0010_html5: No publication year found for item 7!
+2020-07-10 06:54:16,742 POR0010_html6: No publication year found for item 5!
+2020-07-10 06:54:16,744 POR0010_html6: No publication year found for item 6!
+2020-07-10 06:54:16,854 POR0012_html1: No publication year found for item 6!
+2020-07-10 06:54:16,862 POR0012_html1: No publication year found for item 10!
+2020-07-10 06:54:16,900 POR0013_html1: No publication year found for item 3!
+2020-07-10 06:54:16,920 POR0014: No search result in worldcat! Search strings: title: 'Os Bravos do Mindelo', author: 'Fonseca'
+2020-07-10 06:54:17,402 POR0023_html2: No publication year found for item 5!
+2020-07-10 06:54:17,486 POR0026: No search result in worldcat! Search strings: title: 'O Salústio Nogueira', author: 'Queirós'
+2020-07-10 06:54:17,502 POR0027: No search result in worldcat! Search strings: title: 'Um conto portuguez', author: 'Mascarenhas'
+2020-07-10 06:54:17,518 POR0028: No search result in worldcat! Search strings: title: 'A senhora viscondessa', author: 'Lima'
+2020-07-10 06:54:17,640 POR0033: No search result in worldcat! Search strings: title: 'Os filhos do padre Anselmo', author: 'Albergaria'
+2020-07-10 06:54:17,743 POR0037_html1: No publication year found for item 1!
+2020-07-10 06:54:17,846 POR0038_html2: No publication year found for item 2!
+2020-07-10 06:54:17,849 POR0038_html2: No publication year found for item 3!
+2020-07-10 06:54:17,859 POR0038_html2: No publication year found for item 8!
+2020-07-10 06:54:17,948 POR0040: No search result in worldcat! Search strings: title: 'Os tripeiros', author: 'Lousada'
+2020-07-10 06:54:18,183 POR0048: No search result in worldcat! Search strings: title: 'A pálida estrela', author: 'Bulhão Pato'
+2020-07-10 06:54:18,359 POR0053_html1: No publication year found for item 7!
+2020-07-10 06:54:18,493 POR0059: No search result in worldcat! Search strings: title: 'Um duelo nas sombras', author: 'Barata'
+2020-07-10 06:54:18,510 POR0060: No search result in worldcat! Search strings: title: 'O juramento da condessa Esther', author: 'Almeida'
+2020-07-10 06:54:18,556 POR0062: No search result in worldcat! Search strings: title: 'Diário de uma criança', author: 'Castro Osório'
+2020-07-10 06:54:18,690 POR0065: No search result in worldcat! Search strings: title: 'A Marquesa de Vale Negro', author: 'O'
+2020-07-10 06:54:18,706 POR0066: No search result in worldcat! Search strings: title: 'Inocente', author: 'Castro e Almeida'
+2020-07-10 06:54:18,848 POR0068_html2: No publication year found for item 6!
+2020-07-10 06:54:18,892 POR0070: No search result in worldcat! Search strings: title: 'O soldado de Aljubarrota', author: 'Bettencourt'
+2020-07-10 06:54:18,938 POR0072: No search result in worldcat! Search strings: title: 'Os Caramurús', author: 'Lobo de Ávila'
+2020-07-10 06:54:18,955 POR0073: No search result in worldcat! Search strings: title: 'Tempestades do coração', author: 'Moreira'
+2020-07-10 06:54:19,075 POR0078: No search result in worldcat! Search strings: title: 'O agonizar de uma dinastia', author: 'Noronha'
+2020-07-10 06:54:19,232 POR0083: No search result in worldcat! Search strings: title: 'A vida por um prejuízo', author: 'Pestana'
+2020-07-10 06:54:19,272 POR0086: No search result in worldcat! Search strings: title: 'Marina', author: 'Pinho'
+2020-07-10 06:54:19,288 POR0087: No search result in worldcat! Search strings: title: 'Os quatro reis impostores', author: 'Mesquita'
+2020-07-10 06:54:19,304 POR0088: No search result in worldcat! Search strings: title: 'Os miseráveis da aristocracia', author: 'Varela'
+2020-07-10 06:54:19,320 POR0089: No search result in worldcat! Search strings: title: 'Os canibais', author: 'Carvalhal'
+2020-07-10 06:54:19,603 POR0100: No search result in worldcat! Search strings: title: 'A senhora duquesa', author: 'Cordeiro'

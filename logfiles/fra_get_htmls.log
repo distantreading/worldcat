@@ -1,0 +1,204 @@
+2020-07-10 06:55:54,168 FRA01302	Flaubert	Madame Bovary 	https://www.worldcat.org/search?q=ti%3AMadame Bovary +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 06:55:56,142 FRA01302	Flaubert	Madame Bovary 	https://www.worldcat.org/search?q=ti%3AMadame Bovary +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 06:58:04,439 FRA01302	Flaubert	Madame Bovary 	https://www.worldcat.org/search?q=ti%3AMadame Bovary +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=301&qt=page_number_link: TimeOutError 30
+2020-07-10 06:58:32,549 FRA01302	Flaubert	Madame Bovary 	https://www.worldcat.org/search?q=ti%3AMadame Bovary +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=361&qt=page_number_link: TimeOutError 36
+2020-07-10 06:58:52,630 FRA01302	Flaubert	Madame Bovary 	https://www.worldcat.org/search?q=ti%3AMadame Bovary +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=401&qt=page_number_link: TimeOutError 40
+2020-07-10 06:59:25,591 FRA02501	Loti	Mon frère Yves 	https://www.worldcat.org/search?q=ti%3AMon frère Yves +au%3ALoti&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=11&qt=page_number_link: TimeOutError 1
+2020-07-10 07:00:04,476 FRA02602	Malot	Sans famille 	https://www.worldcat.org/search?q=ti%3ASans famille +au%3AMalot&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=61&qt=page_number_link: TimeOutError 6
+2020-07-10 07:00:06,668 FRA02602	Malot	Sans famille 	https://www.worldcat.org/search?q=ti%3ASans famille +au%3AMalot&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=61&qt=page_number_link: TimeOutError 6
+2020-07-10 07:00:08,634 FRA02602	Malot	Sans famille 	https://www.worldcat.org/search?q=ti%3ASans famille +au%3AMalot&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=61&qt=page_number_link: TimeOutError 6
+2020-07-10 07:04:32,703 FRA02701	Maupassant	Bel-Ami 	https://www.worldcat.org/search?q=ti%3ABel-Ami +au%3AMaupassant&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=81&qt=page_number_link: TimeOutError 8
+2020-07-10 07:05:10,637 FRA04401	Barbusse	Le Feu 	https://www.worldcat.org/search?q=ti%3ALe Feu +au%3ABarbusse&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:05:12,675 FRA04401	Barbusse	Le Feu 	https://www.worldcat.org/search?q=ti%3ALe Feu +au%3ABarbusse&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:06:18,154 FRA00501	Balzac	Albert Savarus 	https://www.worldcat.org/search?q=ti%3AAlbert Savarus +au%3ABalzac&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=71&qt=page_number_link: TimeOutError 7
+2020-07-10 07:06:33,060 FRA00501	Balzac	Albert Savarus 	https://www.worldcat.org/search?q=ti%3AAlbert Savarus +au%3ABalzac&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=101&qt=page_number_link: TimeOutError 10
+2020-07-10 07:07:38,724 FRA01702	Gautier	Le roman de la momie 	https://www.worldcat.org/search?q=ti%3ALe roman de la momie +au%3AGautier&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:07:40,675 FRA01702	Gautier	Le roman de la momie 	https://www.worldcat.org/search?q=ti%3ALe roman de la momie +au%3AGautier&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:07:42,627 FRA01702	Gautier	Le roman de la momie 	https://www.worldcat.org/search?q=ti%3ALe roman de la momie +au%3AGautier&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:07:44,566 FRA01702	Gautier	Le roman de la momie 	https://www.worldcat.org/search?q=ti%3ALe roman de la momie +au%3AGautier&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:07:46,531 FRA01702	Gautier	Le roman de la momie 	https://www.worldcat.org/search?q=ti%3ALe roman de la momie +au%3AGautier&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:10:26,046 FRA03601	Proust	Du côté de chez Swann 	https://www.worldcat.org/search?q=ti%3ADu côté de chez Swann +au%3AProust&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=91&qt=page_number_link: TimeOutError 9
+2020-07-10 07:10:27,996 FRA03601	Proust	Du côté de chez Swann 	https://www.worldcat.org/search?q=ti%3ADu côté de chez Swann +au%3AProust&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=91&qt=page_number_link: TimeOutError 9
+2020-07-10 07:10:30,031 FRA03601	Proust	Du côté de chez Swann 	https://www.worldcat.org/search?q=ti%3ADu côté de chez Swann +au%3AProust&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=91&qt=page_number_link: TimeOutError 9
+2020-07-10 07:10:31,968 FRA03601	Proust	Du côté de chez Swann 	https://www.worldcat.org/search?q=ti%3ADu côté de chez Swann +au%3AProust&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=91&qt=page_number_link: TimeOutError 9
+2020-07-10 07:10:34,023 FRA03601	Proust	Du côté de chez Swann 	https://www.worldcat.org/search?q=ti%3ADu côté de chez Swann +au%3AProust&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=91&qt=page_number_link: TimeOutError 9
+2020-07-10 07:10:36,021 FRA03601	Proust	Du côté de chez Swann 	https://www.worldcat.org/search?q=ti%3ADu côté de chez Swann +au%3AProust&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=91&qt=page_number_link: TimeOutError 9
+2020-07-10 07:12:04,357 FRA00502	Balzac	Le cousin Pons 	https://www.worldcat.org/search?q=ti%3ALe cousin Pons +au%3ABalzac&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=101&qt=page_number_link: TimeOutError 10
+2020-07-10 07:12:06,507 FRA00502	Balzac	Le cousin Pons 	https://www.worldcat.org/search?q=ti%3ALe cousin Pons +au%3ABalzac&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=101&qt=page_number_link: TimeOutError 10
+2020-07-10 07:13:23,264 FRA00903	Daudet	Numa Roumestan 	https://www.worldcat.org/search?q=ti%3ANuma Roumestan +au%3ADaudet&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=31&qt=page_number_link: TimeOutError 3
+2020-07-10 07:15:14,412 FRA00901	Daudet	Le petit chose 	https://www.worldcat.org/search?q=ti%3ALe petit chose +au%3ADaudet&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=21&qt=page_number_link: TimeOutError 2
+2020-07-10 07:17:16,291 FRA02702	Maupassant	Une Vie 	https://www.worldcat.org/search?q=ti%3AUne Vie +au%3AMaupassant&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=31&qt=page_number_link: TimeOutError 3
+2020-07-10 07:17:27,112 FRA02702	Maupassant	Une Vie 	https://www.worldcat.org/search?q=ti%3AUne Vie +au%3AMaupassant&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=51&qt=page_number_link: TimeOutError 5
+2020-07-10 07:18:05,524 FRA02702	Maupassant	Une Vie 	https://www.worldcat.org/search?q=ti%3AUne Vie +au%3AMaupassant&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=131&qt=page_number_link: TimeOutError 13
+2020-07-10 07:19:51,523 FRA01303	Flaubert	Salammbô 	https://www.worldcat.org/search?q=ti%3ASalammbô +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=121&qt=page_number_link: TimeOutError 12
+2020-07-10 07:19:53,615 FRA01303	Flaubert	Salammbô 	https://www.worldcat.org/search?q=ti%3ASalammbô +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=121&qt=page_number_link: TimeOutError 12
+2020-07-10 07:19:55,587 FRA01303	Flaubert	Salammbô 	https://www.worldcat.org/search?q=ti%3ASalammbô +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=121&qt=page_number_link: TimeOutError 12
+2020-07-10 07:20:15,780 FRA01303	Flaubert	Salammbô 	https://www.worldcat.org/search?q=ti%3ASalammbô +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=161&qt=page_number_link: TimeOutError 16
+2020-07-10 07:20:43,909 FRA01303	Flaubert	Salammbô 	https://www.worldcat.org/search?q=ti%3ASalammbô +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=221&qt=page_number_link: TimeOutError 22
+2020-07-10 07:20:45,894 FRA01303	Flaubert	Salammbô 	https://www.worldcat.org/search?q=ti%3ASalammbô +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=221&qt=page_number_link: TimeOutError 22
+2020-07-10 07:23:11,371 FRA01202	Féval	Les Errants de nuit 	https://www.worldcat.org/search?q=ti%3ALes Errants de nuit +au%3AFéval&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=11&qt=page_number_link: TimeOutError 1
+2020-07-10 07:23:13,465 FRA01202	Féval	Les Errants de nuit 	https://www.worldcat.org/search?q=ti%3ALes Errants de nuit +au%3AFéval&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=11&qt=page_number_link: TimeOutError 1
+2020-07-10 07:23:15,448 FRA01202	Féval	Les Errants de nuit 	https://www.worldcat.org/search?q=ti%3ALes Errants de nuit +au%3AFéval&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=11&qt=page_number_link: TimeOutError 1
+2020-07-10 07:23:17,504 FRA01202	Féval	Les Errants de nuit 	https://www.worldcat.org/search?q=ti%3ALes Errants de nuit +au%3AFéval&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=11&qt=page_number_link: TimeOutError 1
+2020-07-10 07:23:39,127 FRA01301	Flaubert	L'Éducation sentimentale 	https://www.worldcat.org/search?q=ti%3AL'Éducation sentimentale +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=41&qt=page_number_link: TimeOutError 4
+2020-07-10 07:23:41,071 FRA01301	Flaubert	L'Éducation sentimentale 	https://www.worldcat.org/search?q=ti%3AL'Éducation sentimentale +au%3AFlaubert&fq=+%28x0%3Abook-+OR+%28x0%3Abook+x4%3Aprintbook%29+-%28%28x0%3Abook+x4%3Adigital%29%29+-%28%28x0%3Abook+x4%3Amic%29%29+-%28%28x0%3Abook+x4%3Abraille%29%29+-%28%28x0%3Abook+x4%3Alargeprint%29%29%29+%3E+ln%3Afre+%3E+ln%3Afre&dblist=638&start=41&qt=page_number_link: TimeOutError 4
+2020-07-10 07:26:30,989 FRA00102_html1: No publication year found for item 3!
+2020-07-10 07:26:31,110 FRA00201_html2: No publication year found for item 5!
+2020-07-10 07:26:31,373 FRA00302_html1: No publication year found for item 1!
+2020-07-10 07:26:31,378 FRA00302_html1: No publication year found for item 3!
+2020-07-10 07:26:31,381 FRA00302_html1: No publication year found for item 4!
+2020-07-10 07:26:31,431 FRA00302_html2: No publication year found for item 1!
+2020-07-10 07:26:31,752 FRA00501_html11: No publication year found for item 2!
+2020-07-10 07:26:32,121 FRA00501_html2: No publication year found for item 8!
+2020-07-10 07:26:32,302 FRA00501_html5: No publication year found for item 5!
+2020-07-10 07:26:32,423 FRA00501_html7: No publication year found for item 3!
+2020-07-10 07:26:32,431 FRA00501_html7: No publication year found for item 7!
+2020-07-10 07:26:32,603 FRA00501_html9: No publication year found for item 10!
+2020-07-10 07:26:32,721 FRA00502_html10: No publication year found for item 6!
+2020-07-10 07:26:33,098 FRA00502_html16: No publication year found for item 6!
+2020-07-10 07:26:33,155 FRA00502_html17: No publication year found for item 3!
+2020-07-10 07:26:33,362 FRA00502_html2: No publication year found for item 9!
+2020-07-10 07:26:33,518 FRA00502_html21: No publication year found for item 3!
+2020-07-10 07:26:33,651 FRA00502_html23: No publication year found for item 8!
+2020-07-10 07:26:33,702 FRA00502_html3: No publication year found for item 4!
+2020-07-10 07:26:33,771 FRA00502_html4: No publication year found for item 7!
+2020-07-10 07:26:33,831 FRA00502_html5: No publication year found for item 6!
+2020-07-10 07:26:34,079 FRA00502_html9: No publication year found for item 5!
+2020-07-10 07:26:34,085 FRA00502_html9: No publication year found for item 8!
+2020-07-10 07:26:34,443 FRA00503_html13: No publication year found for item 10!
+2020-07-10 07:26:35,223 FRA00503_html7: No publication year found for item 10!
+2020-07-10 07:26:35,308 FRA00503_html8: No publication year found for item 1!
+2020-07-10 07:26:35,310 FRA00503_html8: No publication year found for item 2!
+2020-07-10 07:26:35,372 FRA00503_html9: No publication year found for item 1!
+2020-07-10 07:26:35,574 FRA00801: No search result in worldcat! Search strings: title: 'Le château de Pinon I ', author: 'Comtesse Dash [Gabrielle Anna de Cisternes de Courtiras'
+2020-07-10 07:26:35,741 FRA00901_html11: No publication year found for item 3!
+2020-07-10 07:26:35,750 FRA00901_html11: No publication year found for item 7!
+2020-07-10 07:26:36,048 FRA00901_html16: No publication year found for item 3!
+2020-07-10 07:26:36,056 FRA00901_html16: No publication year found for item 7!
+2020-07-10 07:26:36,281 FRA00901_html4: No publication year found for item 5!
+2020-07-10 07:26:36,416 FRA00901_html6: No publication year found for item 9!
+2020-07-10 07:26:36,480 FRA00901_html7: No publication year found for item 9!
+2020-07-10 07:26:36,532 FRA00901_html8: No publication year found for item 4!
+2020-07-10 07:26:36,605 FRA00901_html9: No publication year found for item 9!
+2020-07-10 07:26:36,754 FRA00903_html2: No publication year found for item 4!
+2020-07-10 07:26:36,831 FRA00903_html3: No publication year found for item 10!
+2020-07-10 07:26:36,874 FRA00903_html4: No publication year found for item 1!
+2020-07-10 07:26:36,894 FRA00903_html4: No publication year found for item 10!
+2020-07-10 07:26:37,006 FRA00903_html6: No publication year found for item 1!
+2020-07-10 07:26:37,009 FRA00903_html6: No publication year found for item 2!
+2020-07-10 07:26:37,011 FRA00903_html6: No publication year found for item 3!
+2020-07-10 07:26:37,013 FRA00903_html6: No publication year found for item 4!
+2020-07-10 07:26:37,250 FRA00903_html9: No publication year found for item 1!
+2020-07-10 07:26:37,257 FRA00903_html9: No publication year found for item 4!
+2020-07-10 07:26:37,264 FRA00903_html9: No publication year found for item 7!
+2020-07-10 07:26:37,270 FRA00903_html9: No publication year found for item 10!
+2020-07-10 07:26:37,449 FRA01201_html1: No publication year found for item 4!
+2020-07-10 07:26:37,616 FRA01203_html1: No publication year found for item 8!
+2020-07-10 07:26:37,673 FRA01203_html2: No publication year found for item 6!
+2020-07-10 07:26:37,679 FRA01203_html2: No publication year found for item 9!
+2020-07-10 07:26:37,754 FRA01301_html1: No publication year found for item 1!
+2020-07-10 07:26:38,126 FRA01301_html14: No publication year found for item 9!
+2020-07-10 07:26:38,128 FRA01301_html14: No publication year found for item 10!
+2020-07-10 07:26:38,182 FRA01301_html15: No publication year found for item 5!
+2020-07-10 07:26:38,250 FRA01301_html16: No publication year found for item 7!
+2020-07-10 07:26:38,436 FRA01301_html19: No publication year found for item 4!
+2020-07-10 07:26:38,438 FRA01301_html19: No publication year found for item 5!
+2020-07-10 07:26:38,513 FRA01301_html2: No publication year found for item 10!
+2020-07-10 07:26:38,560 FRA01301_html20: No publication year found for item 3!
+2020-07-10 07:26:38,750 FRA01301_html23: No publication year found for item 6!
+2020-07-10 07:26:38,752 FRA01301_html23: No publication year found for item 7!
+2020-07-10 07:26:39,218 FRA01301_html3: No publication year found for item 1!
+2020-07-10 07:26:39,223 FRA01301_html3: No publication year found for item 3!
+2020-07-10 07:26:39,536 FRA01301_html34: No publication year found for item 4!
+2020-07-10 07:26:39,540 FRA01301_html34: No publication year found for item 6!
+2020-07-10 07:26:39,719 FRA01301_html37: No publication year found for item 6!
+2020-07-10 07:26:40,184 FRA01301_html9: No publication year found for item 7!
+2020-07-10 07:26:40,685 FRA01302_html16: No publication year found for item 4!
+2020-07-10 07:26:40,757 FRA01302_html17: No publication year found for item 9!
+2020-07-10 07:26:40,859 FRA01302_html18: No publication year found for item 7!
+2020-07-10 07:26:41,099 FRA01302_html21: No publication year found for item 1!
+2020-07-10 07:26:41,243 FRA01302_html23: No publication year found for item 6!
+2020-07-10 07:26:41,385 FRA01302_html25: No publication year found for item 10!
+2020-07-10 07:26:41,449 FRA01302_html26: No publication year found for item 9!
+2020-07-10 07:26:41,566 FRA01302_html28: No publication year found for item 2!
+2020-07-10 07:26:41,636 FRA01302_html29: No publication year found for item 4!
+2020-07-10 07:26:41,811 FRA01302_html30: No publication year found for item 3!
+2020-07-10 07:26:42,347 FRA01302_html38: No publication year found for item 4!
+2020-07-10 07:26:42,858 FRA01302_html44: No publication year found for item 4!
+2020-07-10 07:26:42,867 FRA01302_html44: No publication year found for item 8!
+2020-07-10 07:26:43,303 FRA01302_html50: No publication year found for item 7!
+2020-07-10 07:26:43,625 FRA01302_html55: No publication year found for item 5!
+2020-07-10 07:26:43,869 FRA01302_html58: No publication year found for item 2!
+2020-07-10 07:26:43,960 FRA01302_html6: No publication year found for item 10!
+2020-07-10 07:26:44,363 FRA01303_html11: No publication year found for item 9!
+2020-07-10 07:26:44,477 FRA01303_html13: No publication year found for item 2!
+2020-07-10 07:26:44,494 FRA01303_html13: No publication year found for item 10!
+2020-07-10 07:26:44,993 FRA01303_html2: No publication year found for item 10!
+2020-07-10 07:26:45,172 FRA01303_html22: No publication year found for item 1!
+2020-07-10 07:26:45,299 FRA01303_html24: No publication year found for item 2!
+2020-07-10 07:26:45,430 FRA01303_html26: No publication year found for item 4!
+2020-07-10 07:26:45,436 FRA01303_html26: No publication year found for item 7!
+2020-07-10 07:26:45,608 FRA01303_html3: No publication year found for item 7!
+2020-07-10 07:26:46,724 FRA01701_html1: No publication year found for item 5!
+2020-07-10 07:26:46,735 FRA01701_html1: No publication year found for item 10!
+2020-07-10 07:26:46,781 FRA01701_html2: No publication year found for item 1!
+2020-07-10 07:26:47,504 FRA01702_html6: No publication year found for item 7!
+2020-07-10 07:26:47,837 FRA01901_html1: No publication year found for item 7!
+2020-07-10 07:26:47,950 FRA01902_html2: No publication year found for item 3!
+2020-07-10 07:26:48,314 FRA02302_html1: No publication year found for item 4!
+2020-07-10 07:26:48,756 FRA02502_html2: No publication year found for item 4!
+2020-07-10 07:26:49,577 FRA02602_html15: No publication year found for item 2!
+2020-07-10 07:26:49,584 FRA02602_html15: No publication year found for item 5!
+2020-07-10 07:26:50,573 FRA02603_html1: No publication year found for item 4!
+2020-07-10 07:26:50,699 FRA02701_html10: No publication year found for item 10!
+2020-07-10 07:26:50,756 FRA02701_html11: No publication year found for item 7!
+2020-07-10 07:26:51,422 FRA02701_html8: No publication year found for item 6!
+2020-07-10 07:26:51,678 FRA02702_html11: No publication year found for item 3!
+2020-07-10 07:26:51,935 FRA02702_html15: No publication year found for item 5!
+2020-07-10 07:26:52,351 FRA02702_html20: No publication year found for item 2!
+2020-07-10 07:26:52,487 FRA02702_html22: No publication year found for item 7!
+2020-07-10 07:26:52,951 FRA02702_html6: No publication year found for item 1!
+2020-07-10 07:26:53,261 FRA02801_html2: No publication year found for item 1!
+2020-07-10 07:26:53,277 FRA02801_html2: No publication year found for item 7!
+2020-07-10 07:26:53,432 FRA03001_html1: No publication year found for item 9!
+2020-07-10 07:26:53,484 FRA03001_html2: No publication year found for item 6!
+2020-07-10 07:26:53,586 FRA03003_html1: No publication year found for item 4!
+2020-07-10 07:26:53,764 FRA03102_html2: No publication year found for item 10!
+2020-07-10 07:26:53,912 FRA03102_html4: No publication year found for item 2!
+2020-07-10 07:26:53,916 FRA03102_html4: No publication year found for item 4!
+2020-07-10 07:26:54,262 FRA03601_html10: No publication year found for item 6!
+2020-07-10 07:26:54,505 FRA03601_html14: No publication year found for item 1!
+2020-07-10 07:26:54,634 FRA03601_html16: No publication year found for item 4!
+2020-07-10 07:26:54,636 FRA03601_html16: No publication year found for item 5!
+2020-07-10 07:26:54,691 FRA03601_html17: No publication year found for item 1!
+2020-07-10 07:26:55,244 FRA03601_html7: No publication year found for item 5!
+2020-07-10 07:26:55,385 FRA03601_html9: No publication year found for item 8!
+2020-07-10 07:26:55,947 FRA03703_html5: No publication year found for item 2!
+2020-07-10 07:26:55,952 FRA03703_html5: No publication year found for item 4!
+2020-07-10 07:26:56,216 FRA03704_html4: No publication year found for item 9!
+2020-07-10 07:26:56,521 FRA04001_html1: No publication year found for item 10!
+2020-07-10 07:26:56,582 FRA04001_html2: No publication year found for item 8!
+2020-07-10 07:26:56,820 FRA04001_html5: No publication year found for item 2!
+2020-07-10 07:26:56,829 FRA04001_html5: No publication year found for item 6!
+2020-07-10 07:26:57,056 FRA04002_html3: No publication year found for item 9!
+2020-07-10 07:26:57,058 FRA04002_html3: No publication year found for item 10!
+2020-07-10 07:26:57,362 FRA04201_html1: No publication year found for item 4!
+2020-07-10 07:26:57,708 FRA04201_html6: No publication year found for item 4!
+2020-07-10 07:26:58,054 FRA04301_html1: No publication year found for item 3!
+2020-07-10 07:26:58,377 FRA04401_html4: No publication year found for item 10!
+2020-07-10 07:26:58,636 FRA04501_html3: No publication year found for item 7!
+2020-07-10 07:26:58,799 FRA04601_html1: No publication year found for item 4!
+2020-07-10 07:26:58,801 FRA04601_html1: No publication year found for item 5!
+2020-07-10 07:26:59,528 FRA04901_html6: No publication year found for item 7!
+2020-07-10 07:26:59,531 FRA04901_html6: No publication year found for item 8!
+2020-07-10 07:26:59,535 FRA04901_html6: No publication year found for item 10!
+2020-07-10 07:26:59,648 FRA04901_html8: No publication year found for item 4!
+2020-07-10 07:26:59,718 FRA04901_html9: No publication year found for item 8!
+2020-07-10 07:26:59,994 FRA05401_html2: No publication year found for item 3!
+2020-07-10 07:27:00,294 FRA05702_html1: No publication year found for item 10!
+2020-07-10 07:27:00,397 FRA05702_html2: No publication year found for item 10!
+2020-07-10 07:27:00,643 FRA06101_html1: No publication year found for item 2!
+2020-07-10 07:27:01,084 FRA06301_html1: No publication year found for item 1!
+2020-07-10 07:27:01,265 FRA06301_html3: No publication year found for item 9!
+2020-07-10 07:27:01,396 FRA06501_html1: No publication year found for item 1!
+2020-07-10 07:27:01,399 FRA06501_html1: No publication year found for item 2!

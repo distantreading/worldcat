@@ -7,14 +7,14 @@
 # the intended ELTeC repository is found. (Not directly the folder
 # that contains XML-TEI files.)
 
-basedir: "C:/Users/Johanna/Desktop/ELTeC_worldcat/ELTeC" # Example on Windows
-#basedir : "/media/christof/mydata/repos/cost/" # Example on Linux
+#basedir: "C:/Users/Johanna/Desktop/ELTeC_worldcat/ELTeC" # Example on Windows
+basedir : "/media/christof/mydata/repos/cost/" # Example on Linux
 
 
 # Language of the collection. Only those entries in WorldCat will be 
 # considered that correspond to this language.
 
-lang : "por" # fra, eng, deu, ita, por, spa, srp, gre, hun, slv, rom, nor, cze, lit
+lang : "slv" # fra, eng, deu, ita, por, spa, srp, gre, hun, slv, rom, nor, cze, lit
 
 # Choose level of xml-files:
 
